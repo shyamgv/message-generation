@@ -1,0 +1,1 @@
+#Simple Microservice without SSO is called from Greeter application

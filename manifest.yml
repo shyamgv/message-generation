@@ -1,0 +1,14 @@
+---
+instances: 1
+memory: 512M
+applications:
+  - name: message-generation
+    host: message-generation-shyam
+    buildpack: java_buildpack_offline
+    path: target/message-generation-0.0.1-SNAPSHOT.jar
+    services:
+      - service-registry
+      - SSO
+    env:
+      SPRING_PROFILES_ACTIVE: cloud
+      CF_TARGET: https://api.sys.xxx.xxx.com
